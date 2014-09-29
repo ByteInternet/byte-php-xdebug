@@ -25,8 +25,8 @@ install: build
 	dh_prep
 	dh_installdirs
 	
-	mkdir -p ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/
-	install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/xdebug.so
+	mkdir -p ./debian/byte-php55-xdebug/$(shell php-config --extension-dir)/
+	install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php55-xdebug/$(shell php-config --extension-dir)/xdebug.so
 
 binary-indep: build install
 binary-arch: build install
