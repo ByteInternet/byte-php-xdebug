@@ -1,10 +1,10 @@
-Source: byte-php55-xdebug
+Source: byte-php53-xdebug
 Section: web
 Priority: optional
 Maintainer: Byte Internet (support@byte.nl)
-Build-Depends: debhelper (>= 7), byte-php55-dev
+Build-Depends: debhelper (>= 7), byte-php53-dev
 
-Package: byte-php55-xdebug
+Package: byte-php53-xdebug
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: php5
