@@ -1,0 +1,11 @@
+Source: byte-php54-imagick
+Section: web
+Priority: optional
+Maintainer: Byte Internet (support@byte.nl)
+Build-Depends: debhelper (>= 7), byte-php54-dev
+
+Package: byte-php54-imagick
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: php5
+Description: Byte PHP XDebug
