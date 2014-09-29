@@ -1,0 +1,5 @@
+byte-php54-xdebug (2.2.5-1byte) stable; urgency=low
+
+  * Initial release. 
+
+ -- Tim Muller <tim@byte.nl>  Mon, 29 Sep 2014 11:04:46 +0200
