@@ -5,7 +5,7 @@ build: build-stamp
 build-stamp:
 	dh_testdir
 	
-	cd $(shell pwd) && phpize --clean && phpize54 && ./configure
+	cd $(shell pwd) && phpize --clean && phpize55 && ./configure
 	$(MAKE) -C $(shell pwd)
 	
 	touch build-stamp
