@@ -3,45 +3,45 @@
 
 build: build-stamp
 build-stamp:
-        dh_testdir
-        
-        cd $(shell pwd) && phpize --clean && phpize54 && ./configure
-        $(MAKE) -C $(shell pwd)
-
-        touch build-stamp
+	dh_testdir
+	
+	cd $(shell pwd) && phpize --clean && phpize54 && ./configure
+	$(MAKE) -C $(shell pwd)
+	
+	touch build-stamp
 
 clean:
-        dh_testdir
-        dh_testroot
-        rm -f build-stamp
-
-        cd $(shell pwd) && phpize --clean
-
-        dh_clean
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	
+	cd $(shell pwd) && phpize --clean
+	
+	dh_clean
 
 install: build
-        dh_testdir
-        dh_testroot
-        dh_prep
-        dh_installdirs
-
-        mkdir -p ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/
-        install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/xdebug.so
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	
+	mkdir -p ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/
+	install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php54-xdebug/$(shell php-config --extension-dir)/xdebug.so
 
 binary-indep: build install
 binary-arch: build install
-        dh_testdir
-        dh_testroot
-        dh_installchangelogs
-        dh_link
-        dh_strip
-        dh_compress
-        dh_fixperms
-        dh_installdeb
-        dh_shlibdeps
-        dh_gencontrol
-        dh_md5sums
-        dh_builddeb
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
