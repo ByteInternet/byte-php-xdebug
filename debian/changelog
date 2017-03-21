@@ -1,4 +1,4 @@
-byte-php56-xdebug (2.2.5-1byte) stable; urgency=low
+byte-php70-xdebug (2.4.0-1byte) stable; urgency=low
 
   * Initial release. 
 
