@@ -5,7 +5,7 @@ build: build-stamp
 build-stamp:
 	dh_testdir
 	
-	cd $(shell pwd) && phpize --clean && phpize70 && ./configure
+	cd $(shell pwd) && phpize --clean && phpize71 && ./configure
 	$(MAKE) -C $(shell pwd)
 	
 	touch build-stamp
@@ -25,8 +25,8 @@ install: build
 	dh_prep
 	dh_installdirs
 	
-	mkdir -p ./debian/byte-php70-xdebug/$(shell php-config --extension-dir)/
-	install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php70-xdebug/$(shell php-config --extension-dir)/xdebug.so
+	mkdir -p ./debian/byte-php71-xdebug/$(shell php-config --extension-dir)/
+	install -m 64 -o root -g root ./modules/xdebug.so ./debian/byte-php71-xdebug/$(shell php-config --extension-dir)/xdebug.so
 
 binary-indep: build install
 binary-arch: build install

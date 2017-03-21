@@ -1,10 +1,10 @@
-Source: byte-php70-xdebug
+Source: byte-php71-xdebug
 Section: web
 Priority: optional
 Maintainer: Byte Internet (support@byte.nl)
-Build-Depends: debhelper (>= 7), byte-php70-dev
+Build-Depends: debhelper (>= 7), byte-php71-dev
 
-Package: byte-php70-xdebug
+Package: byte-php71-xdebug
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: php7
